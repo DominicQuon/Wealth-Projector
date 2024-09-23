@@ -1,0 +1,144 @@
+:root {
+    --primary-color: #4CAF50;
+    --primary-hover: #45a049;
+    --danger-color: #f44336;
+    --danger-hover: #da190b;
+    --background-color: #f4f4f4;
+    --card-background: #fff;
+    --text-color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: var(--card-background);
+    min-height: 100vh;
+}
+
+.left-column {
+    width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd;
+}
+
+.right-column {
+    width: 75%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-color);
+}
+
+#propertiesContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.property {
+    flex: 0 0 calc(33% - 20px);
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button:hover, button:focus {
+    background-color: var(--primary-hover);
+    outline: none;
+}
+
+.summary, .debt {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+#totalSummary {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#totalSummary h2 {
+    margin-top: 0;
+}
+
+.year-slider {
+    margin-bottom: 20px;
+}
+
+#yearSlider {
+    width: 100%;
+}
+
+.remove-property {
+    background-color: var(--danger-color);
+    margin-top: 10px;
+}
+
+.remove-property:hover, .remove-property:focus {
+    background-color: var(--danger-hover);
+}
+
+@media (max-width: 1200px) {
+    .property {
+        flex: 0 0 calc(100% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .left-column, .right-column {
+        width: 100%;
+    }
+}
